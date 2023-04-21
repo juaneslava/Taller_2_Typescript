@@ -9,18 +9,32 @@
 <body>    
     <div class="container">
         <h1>Series TV </h1>
-        <table id= "seriesTable" class="table">
-            <thead class="thead-dark">
-               <tr>
-                <th scope="col">#</th>
-                <th scope="col">Name</th>
-                <th scope="col">Channel</th>
-                <th scope="col">Seasons</th>
-                </tr>
-            </thead>
-            <tbody id="series"></tbody>
-        </table>
-        <div id="seasons-average" class="row"></div>
+        <div class="row">
+            <div class="col-md-6">
+                <table id= "seriesTable" class="table">
+                    <thead class="thead-dark">
+                       <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Channel</th>
+                        <th scope="col">Seasons</th>
+                        </tr>
+                    </thead>
+                    <tbody id="series"></tbody>
+                </table>
+                <div id="seasons-average" class="row"></div>
+            </div>
+            <div class="col-md-6">
+                <div class="card" style="width: 18rem;">
+                    <img id="serie-image" class="card-img-top" src="" alt="Serie Image">
+                    <div class="card-body">
+                        <h5 id="serie-title" class="card-title"></h5>
+                        <p id="serie-description" class="card-text"></p>
+                        <a id="serie-url" href="#" target="_blank">Click para ver la serie</a>
+                    </div>
+                </div>
+            </div>
+        </div>   
     </div>
     <script type="module" src="./scripts/series.js" ></script>
     <script type="module" src="./scripts/dataSeries.js" ></script>
