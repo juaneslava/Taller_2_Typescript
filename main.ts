@@ -14,7 +14,7 @@ function renderSeriesInTable(series: Serie[]): void {
   series.forEach((serie) => {
     let trElement = document.createElement("tr");
     trElement.innerHTML = `<td>${serie.id}</td>
-                           <td>${serie.name}</td>
+                           <td id="serie-nombre">${serie.name}</td>
                            <td>${serie.channel}</td>
                            <td>${serie.seasons}</td>`;
     seriesTbody.appendChild(trElement);
@@ -22,7 +22,8 @@ function renderSeriesInTable(series: Serie[]): void {
       // Actualiza el contenido del detalle de la serie con los datos de la serie seleccionada
       document.getElementById('serie-title')!.textContent = serie.name;
       document.getElementById('serie-description')!.textContent = serie.description;
-      document.getElementById('serie-image')!.setAttribute('src', serie.image);
+      const serieImage = document.getElementById('serie-image')!
+        serieImage.setAttribute('src', serie.image);
       const serieUrl = document.getElementById('serie-url') as HTMLAnchorElement;
             serieUrl.href = serie.url;
     });
